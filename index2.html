@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    let index = -1;
+
+    function mang(num, arr) {
+        for (let i = 0; i < arr.length; i++) {
+            if (num === arr[i]) {
+                index = i;
+            }
+        }
+        if (index === -1) {
+            document.write("Phần tử cần tìm không có trong mảng");
+        } else {
+            document.write("Phần tử cần tìm có trong mảng tại vị trí thứ " + index);
+        }
+    }
+
+    mang(7,arr);
+
+</script>
+</body>
+</html>

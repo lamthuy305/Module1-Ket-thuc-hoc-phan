@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = "Chủ tịch Hồ Chí Minh (tên lúc nhỏ là Nguyễn Sinh Cung, tên khi đi học là Nguyễn Tất Thành, trong nhiều năm hoạt động cách mạng trước đây lấy tên là Nguyễn Ái Quốc), sinh ngày 19-5-1890 ở làng Kim Liên, xã Nam Liên, huyện Nam Đàn, tỉnh Nghệ An và mất ngày 2-9-1969 tại Hà Nội.";
+    let nguyenAm = ["a", "o", "e", "u", "i"];
+    let count = 0;
+
+    function kiemTraNguyenAm(arr, nguyenAm) {
+        for (let i = 0; i < arr.length; i++) {
+            let text = arr.charAt(i, 1);
+            for (let j = 0; j < nguyenAm.length; j ++) {
+                if (text === nguyenAm[j]) {
+                    count++;
+                }
+            }
+        }
+        if (count === 0) {
+            document.write("Không có nguyên âm nào trong chuỗi");
+            // return false;
+        } else {
+            document.write("Có " + count + " nguyên âm trong chuỗi");
+        }
+    }
+
+    kiemTraNguyenAm(arr, nguyenAm);
+
+</script>
+</body>
+</html>
